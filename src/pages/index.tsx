@@ -34,8 +34,8 @@ const Home = () => {
              
             </div>
 
-            <div className="grid place-content-center pt-[200px]">
-              <WalletMultiButton className="rounded-sm" />
+            <div className="grid place-content-center pt-[200px] bg-[#512da8] ">
+              <WalletMultiButton className="rounded-sm bg-[#512da8] " />
             </div>
           </div>
         </div>
