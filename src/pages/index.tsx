@@ -23,7 +23,10 @@ const Home = () => {
     <main className="min-h-screen  text-white">
       <div>
         <div className="">
-          <video className="relative w-full h-screen object-cover" autoPlay loop muted>
+          <video className="relative w-full h-screen object-cover"autoPlay
+        loop
+        muted
+        playsInline >
             <source src={VideoBg} type="video/mp4" />
           </video>
           <div className="absolute inset-0  grid place-content-center p-[100px]">
