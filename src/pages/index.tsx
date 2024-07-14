@@ -34,7 +34,11 @@ const Home = () => {
             <source src={VideoBg} type="video/mp4" />
           </video>
 
+          
+
           <div className="absolute inset-0  grid place-content-center p-[100px]">
+          <h1 className="text-center py-6 font-bold text-[35px] bg-gradient-to-r from-[#27d6ab] to-[#cd32fc] text-transparent bg-clip-text drop-shadow-2xl ">Check for spare Solana</h1>
+
             <div
               style={{
                 borderWidth: "4px",
