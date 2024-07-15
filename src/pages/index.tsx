@@ -34,25 +34,11 @@ const Home = () => {
             <source src={VideoBg} type="video/mp4" />
           </video>
 
-          
-
           <div className="absolute inset-0  grid place-content-center p-[100px]">
-          <h1 className="text-center py-6 font-bold text-[35px] bg-gradient-to-r from-[#27d6ab] to-[#cd32fc] text-transparent bg-clip-text drop-shadow-2xl ">Check for spare Solana</h1>
-
-            <div
-              style={{
-                borderWidth: "4px",
-                borderStyle: "solid",
-                borderImage: "linear-gradient(to right, #923ef2, #8F4AFE) 1",
-                borderColor: "transparent",
-                borderRadius: "50%",
-              }}
-              className="w-[300px] rounded-md sm:w-[600px] h-[400px]"
-            >
+            <div className="w-[300px] border-[1px] border-gray-200 bg-[#121325] bg-opacity-70 rounded-md sm:w-[600px] h-[350px]">
               <div>
                 {wallet.connected ? (
                   <div className="grid sm:w-[600px]">
-
                     <div className="grid place-content-end pt-6 pr-6">
                       <button className="bg-gradient-to-r from-[#27d6ab] to-[#cd32fc] rounded-md  sm:px-[3px] sm:py-[3px]">
                         <WalletMultiButton className="rounded-sm bg-[#512da8] " />
@@ -60,14 +46,14 @@ const Home = () => {
                     </div>
 
                     <div className="grid place-content-center">
-                    <button
-                      onClick={getInfo}
-                      style={{ opacity: balance > 0 ? 0.5 : 1 }}
-                      disabled={balance > 0}
-                      className="text-center bg-gradient-to-r from-[#923ef2] to-[#8F4AFE] hover:from-[#27d6ab] hover:to-[#cd32fc] rounded-md px-3 py-2 sm:text-2xl mt-[50px]"
-                    >
-                      Check for spare solana
-                    </button>
+                      <button
+                        onClick={getInfo}
+                        style={{ opacity: balance > 0 ? 0.5 : 1 }}
+                        disabled={balance > 0}
+                        className="text-center bg-gradient-to-r from-[#923ef2] to-[#8F4AFE] hover:from-[#27d6ab] hover:to-[#cd32fc] rounded-md px-3 py-2 sm:text-2xl mt-[50px]"
+                      >
+                        Check for spare solana
+                      </button>
                     </div>
 
                     {balance ? (
@@ -78,14 +64,22 @@ const Home = () => {
                   </div>
                 ) : (
                   <div>
-                    <h1 className="pt-[50px] text-center text-2xl">
-                      Connect your wallet
-                    </h1>
+                    <div>
+                      <h1 className="text-center py-6 mb-[90px] text-[32px] text-white">
+                        Check for spare Solana
+                      </h1>
 
-                    <div className="grid place-content-center pt-[200px] ">
-                      <button className="bg-gradient-to-r from-[#27d6ab] to-[#cd32fc] rounded-md sm:px-[3px] sm:py-[3px]">
-                        <WalletMultiButton className="rounded-sm bg-[#512da8] " />
-                      </button>
+                      <div className="">
+                      <h1 className="text-center text-[#c0c8d6] pb-3 text-2xl">
+                        Connect your wallet
+                      </h1>
+
+                      <div className="grid place-content-center ">
+                        <button className="bg-gradient-to-r from-[#27d6ab] to-[#cd32fc] rounded-md sm:px-[110px] sm:py-[3px]">
+                          <WalletMultiButton className="rounded-sm bg-[#512da8] " />
+                        </button>
+                      </div>
+                      </div>
                     </div>
                   </div>
                 )}
